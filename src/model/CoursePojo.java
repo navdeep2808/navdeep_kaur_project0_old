@@ -36,7 +36,13 @@ public class CoursePojo {
 		public int getCourseId() {
 				return courseId;
 			}
+		
+		CREATE TABLE student_details(student_rollno INT PRIMARY KEY, student_first_name VARCHAR(20),student_last_name VARCHAR(20), student_gender  VARCHAR(20), student_address  VARCHAR(20), student_email_id  VARCHAR(30), student_phoneno INT, student_username  VARCHAR(20), student_password  VARCHAR(20));
+		VALUES (505 , 'John' , 'Peter', 'Male', 'Programming' , 'Coding Instructor' , '#25 Highway Street , Toronto', 'john.peter@gmail.com' , 'johnPeter12345', 'PeterJohn54321'); 
 
+		INSERT INTO student_details(student_rollno, student_first_name ,student_last_name , student_gender  , student_address  , student_email_id  , student_phoneno , student_username  , student_password  ) VALUES (301 , 'Jane' , 'Mall', 'Male', 'Surrey', 'janejmall@gmail.com' ,987564, 'janeMall45', 'good21ghr'); 
+		INSERT INTO student_details(student_rollno, student_first_name ,student_last_name , student_gender  , student_address  , student_email_id  , student_phoneno , student_username  , student_password  ) VALUES (302 , 'Eron' , 'Bage', 'Male', 'NewYork', 'eron.bage11@gmail.com' ,877565, 'EronBage11', 'Eron11Bage11'); 
+		INSERT INTO student_details(student_rollno, student_first_name ,student_last_name , student_gender  , student_address  , student_email_id  , student_phoneno , student_username  , student_password  ) VALUES (304 , 'Lisa' , 'Gauge', 'Female', 'Victoria', 'lisa11@gmail.com' ,87945, 'LisaGauge132', 'HelloLisa'); 
 
 		public void setCourseId(int courseId) {
 			this.courseId = courseId;

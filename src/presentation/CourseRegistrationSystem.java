@@ -15,8 +15,139 @@ public class CourseRegistrationSystem {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
+		String userInput;
 		CourseService courseService = new CourseServiceImpl();
+		
+		System.out.println("*****************************");
+		System.out.println("WELCOME TO COURSE REGISTRATION SYSTEM");
+		System.out.println("*****************************");
+		System.out.println("1. Register a User");
+		System.out.println("2. Login");
+		System.out.println("3. Continue as a Guest User");
+		System.out.println("4. Exit");
+		System.out.println("*****************************");
+		System.out.println("Please enter an option:");
+		int loginOption = scan.nextInt();
+		System.out.println("*****************************");
+		String userCategory = scan.nextLine();
+		userInput = scan.nextLine();
+		char tryAgain = 'y';
+		
+		while(tryAgain== 'y') {
+				switch(loginOption) {
+				case 1:
+					System.out.println("*****************************");
+					System.out.println("USER REGISTRATION");
+					System.out.println("Input your category student / faculty ");
+					if (userCategory == "student" || userCategory == "Student" || userCategory == "STUDENT") {
+						System.out.println("***************************************************************************************");
+						System.out.println("*********** STUDENT REGISTRATION *****************");
+						System.out.println(" Input your Roll Number ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your First Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Last Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Gender ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Department ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Designation ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Address ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Email Id ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Phone Number ");
+						userInput = scan.nextLine();
+						System.out.println(" Set your User Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Set your Password ");
+						userInput = scan.nextLine();
+						
+						
+						System.out.println("***************************************************************************************");
+						System.out.println("***** Thankyou! You are registered to Course Registration System **********");
+						System.out.println("***************************************************************************************");
+						
+					}
+					else if(userCategory == "faculty" || userCategory == "Faculty" || userCategory == "FACULTY") {
+						System.out.println("***************************************************************************************");
+						System.out.println("*********** FACULTY REGISTRATION *****************");
+						System.out.println(" Input your Faculty Id ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your First Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Last Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Gender ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Address ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Email Id ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Phone Number ");
+						userInput = scan.nextLine();
+						System.out.println(" Set your User Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Set your Password ");
+						userInput = scan.nextLine();
+						
+						System.out.println("***************************************************************************************");
+						System.out.println("***** Thankyou! You are registered to Course Registration System **********");
+						System.out.println("***************************************************************************************");
+						
+					}
+					else {
+						System.out.println(" Wrong input! Continue as a Guest User");
+					}
+		
+					
+					break;
+					
+				case 2:
+					if (userCategory == "student" || userCategory == "Student" || userCategory == "STUDENT") {
+						System.out.println(" Input your User Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Password ");
+						userInput = scan.nextLine();
+						//if
+						
+					}
+					else if(userCategory == "faculty" || userCategory == "Faculty" || userCategory == "FACULTY") {
+						System.out.println(" Input your User Name ");
+						userInput = scan.nextLine();
+						System.out.println(" Input your Password ");
+						userInput = scan.nextLine();
+						//if
+						
+					}
+					else {
+						System.out.println(" Wrong input! Continue as a Guest User");
+					}
+					break;
+					
+				case 3:
+					System.out.println(" Don't Want to Register! Continue as a Guest User!");
+					tryAgain = 'n';
+					break;
+					
+				case 4:
+					System.out.println("***************************************************************************************");
+					System.out.println("Thank you for using Course Registration System!!");
+					System.out.println("***************************************************************************************");
+					System.exit(0);
+					break;
+					
+				default: 
+					System.out.println(" Wrong input!");
+					System.out.println("Do you want to try again ?(y/n)");
+					tryAgain = scan.next().charAt(0);
+					//System.exit(0);
+					break;
+				}
+			}
+			
 		char proceed = 'y';
 		
 		while(proceed == 'y') {
@@ -33,7 +164,6 @@ public class CourseRegistrationSystem {
 			int option = scan.nextInt();
 			System.out.println("*****************************");
 			List<CoursePojo> everyCourse;
-			String userInput;
 			int userInputCourseId;
 
 			switch(option) {

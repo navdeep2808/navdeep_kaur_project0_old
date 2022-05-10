@@ -1,9 +1,13 @@
 package dao;
 
-import model.CoursePojo;
+import model.FacultyPojo;
 
 public interface FacultyDao {
 	
-	FacultyPojo addFaculty(FacultyPojo facultyPojo);
+	FacultyPojo registerFaculty(FacultyPojo facultyPojo);
+	
+	FacultyPojo loginFaculty(FacultyPojo facultyPojo);
+	
+	FacultyPojo logoutFaculty(FacultyPojo facultyPojo);
 
 }

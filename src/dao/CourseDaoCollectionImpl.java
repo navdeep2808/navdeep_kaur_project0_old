@@ -64,8 +64,8 @@ public class CourseDaoCollectionImpl implements CourseDao {
 		@Override
 		public List<CoursePojo> getAllCourses()throws EmptyCourseCatalogException {
 			if(allCourses.isEmpty()) {
-				EmptyCourseCatalogException ese = new EmptyCourseCatalogException();
-				throw ese;
+				EmptyCourseCatalogException ecce = new EmptyCourseCatalogException();
+				throw ecce;
 			}
 			return allCourses;
 		}
